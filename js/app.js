@@ -1,20 +1,14 @@
-var h1 = document.querySelector('h1')
-function tekshirQoldiq() {
-    var son = prompt("Istalgan sonni kiriting:");
+var h1 = document.querySelector("h1")
+var son = prompt("Istalgan son kiriting :")
+var qoldiq = son % 2;
 
-    son = parseFloat(son);
 
-    if (isNaN(son)) {
-        h1.textContent = "tekshirib qaytadan urining"
+if (isNaN(son)) {
+    h1.textContent = "ERROR 404 FOUND :("
+} else {
+    if (qoldiq === 0) {
+        h1.textContent = "Qoldiq yo'q"
     } else {
-        var qoldiq = son % 2;
-
-        if (qoldiq === 0) {
-            h1.textContent = "Qoldiq yo'q"
-        } else {
-            h1.textContent = "Qoldiq mavjud"
-        }
+        h1.textContent = "Qoldiq mavjud"
     }
 }
-
-tekshirQoldiq();
